@@ -1,0 +1,37 @@
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GestorAeropuerto extends Usuario{
+	
+	private List<Usuario> usuarios = new ArrayList<>();
+	public void modificarUsuario(Usuario u, String nuevoNombre, String nuevaContraseña, int nuevoId) {
+		u.setNombre(nuevoNombre);
+		u.setId(nuevoId);
+		u.setContraseña(nuevaContraseña);
+        System.out.println("El usuario ha sido modificado con los siguientes valores:");
+        System.out.println("Nuevo Nombre: " + nuevoNombre);
+        System.out.println("Nueva Contraseña: " + nuevaContraseña);
+        System.out.println("Nuevo ID: " + nuevoId);	
+        }
+	
+    public void añadirUsuario(String nuevoNombre, String nuevaContraseña, int nuevoId) {
+        Usuario nuevoUsuario = new Usuario();
+        nuevoUsuario.setNombre(nuevoNombre);
+        nuevoUsuario.setContraseña(nuevaContraseña);
+        nuevoUsuario.setId(nuevoId);
+        usuarios.add(nuevoUsuario);
+        System.out.println("Nuevo usuario añadido con los siguientes valores:");
+        System.out.println("Nombre: " + nuevoNombre);
+        System.out.println("Contraseña: " + nuevaContraseña);
+        System.out.println("ID: " + nuevoId);
+    }
+    
+    public void verUsuarios() {
+        for (Usuario usuario : usuarios) {
+            System.out.println(usuario);
+        }
+    }
+
+}
+
