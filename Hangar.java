@@ -15,38 +15,39 @@ public class Hangar{
     }
 
     //geters y seters
-    public int getId(){
+    public int getId() {
         return id;
     }
-    public void setId(int newId){
-        this.id = newId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public double getAncho(){
+    public double getAncho() {
         return ancho;
     }
-    public void setAncho(double newAncho){
-        this.ancho = newAncho;
+    public void setAncho(double ancho) {
+        this.ancho = ancho;
     }
 
-    public double getAlto(){
+    public double getAlto() {
         return alto;
     }
-    public void setAlto(double newAlto){
-        this.alto = newAlto;
+    public void setAlto(double alto) {
+        this.alto = alto;
     }
 
-    public double getLargo(){
+    public double getLargo() {
         return largo;
     }
-    public void setLargo(double newLargo){
-        this.largo = newLargo;
+    public void setLargo(double largo) {
+        this.largo = largo;
     }
 
-    public int getNumPlazas(){
+    public int getNumPlazas() {
         return numPlazas;
     }
-    public void setNumPlazas(int newNumPlazas){
-        this.id = newNumPlazas;
+    public void setNumPlazas(int numPlazas) {
+        this.numPlazas = numPlazas;
     }
+
 }

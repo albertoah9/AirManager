@@ -9,17 +9,17 @@ public class HangarCarga extends Hangar {
         this.mercPeligrosas = mercPeligrosas;
     }
 
-    public int getTemperatura(){
+    public int getTemperatura() {
         return temperatura;
     }
-    public void setTemperatura(int newTemperatura){
-        this.temperatura = newTemperatura;
+    public void setTemperatura(int temperatura) {
+        this.temperatura = temperatura;
     }
 
-    public boolean getMercPeligrosas(){
+    public boolean isMercPeligrosas() {
         return mercPeligrosas;
     }
-    public void setMercPeligrosas(boolean newMercPeligrosas){
-        this.mercPeligrosas = newMercPeligrosas;
+    public void setMercPeligrosas(boolean mercPeligrosas) {
+        this.mercPeligrosas = mercPeligrosas;
     }
 }
