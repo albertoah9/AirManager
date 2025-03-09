@@ -5,3 +5,4 @@ public class OperadorAereo extends Usuario{
 		super(nombre, contraseña, id, "Operador");
 	}
 }
+
