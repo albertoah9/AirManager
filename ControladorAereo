@@ -5,3 +5,4 @@ public class ControladorAereo extends Usuario{
 		super(nombre, contraseña, id, "Controlador");
 	}
 }
+
