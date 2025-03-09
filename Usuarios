@@ -1,10 +1,25 @@
+package usuarios;
 
 public class Usuario{
 	
 	private int id;
 	private String contraseña;
 	private String nombre;
+	private String rol;
 	
+	public Usuario(String nombre, String contraseña, int id, String rol) {
+		this.nombre = nombre;
+		this.contraseña = contraseña;
+		this.id = id;
+		this.rol = rol;
+	}
+	
+	public String getRol() {
+		return rol;
+	}
+	public void setRol(String rol) {
+		this.rol = rol;
+	}
 	public int getId() {
 		return id;
 	}
