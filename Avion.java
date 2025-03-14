@@ -15,6 +15,7 @@ public class Avion {
     private LocalDate anyoCompra;
     private boolean controlTemp;
     private EstadoAvion estadoAvion;
+    private Aerolinea aerolinea //Añadido, ver a que aerolinea pertenece el avion
 
     //asignaciones(constructor)
     public Avion(int id, String marca, String modelo, String matricula, int autonomia, 
@@ -28,9 +29,13 @@ public class Avion {
         this.anyoCompra = anyoCompra;
         this.controlTemp = controlTemp;
         this.estadoAvion = estadoAvion;
+        this.aerolinea = null; //Añadido
     }
 
     //geters y seters
+    public Aerolinea getAerolinea() { return aerolinea; } //Añadido
+
+    
     public int getId() {
         return id;
     }
@@ -93,5 +98,15 @@ public class Avion {
     public void setEstadoAvion(EstadoAvion estadoAvion) {
         this.estadoAvion = estadoAvion;
     }
+    
+    //Añadido, metodo para asignar una aerolinea al avion
+    public void asignarAerolinea(Aerolinea aerolinea) {
+        if (this.aerolinea != null) {
+            this.aerolinea.removerAvion(this);  // Si el avión ya tiene aerolínea, lo removemos de la anterior
+        }
+        this.aerolinea = aerolinea;
+        aerolinea.añadirAvion(this);  // Añadimos el avión a la nueva aerolínea
+    }
+    
 
 }
