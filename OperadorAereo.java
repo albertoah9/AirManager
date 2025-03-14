@@ -24,3 +24,6 @@ public class OperadorAereo extends Usuario{
 	    }
 }
 
+
+"Añadir una lista en aerolinea de los operadores que hay????????????"
+
