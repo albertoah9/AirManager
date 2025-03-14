@@ -6,17 +6,20 @@ public class Aerolinea {
 	private int pais;
 	private String codigoAerolinea;
 	private List<Avion> flota;
+	private List<Facturas> facturas;
 	
 	public Aerolinea(String nombre, int pais, String codigoAerolinea) {
 		this.nombre = nombre;
 		this.pais = pais;
 		this.codigoAerolinea = codigoAerolinea;
 		this.flota = new ArrayList<>();
+		this.facturas = new ArrayList<>();
 	}
 	
     public List<Avion> getFlota() { return flota; }
 
-	
+    public List<Facturas> getFacturas() { return facturas; }
+
 	public String getNombre() {
 	    return nombre;
 	}
@@ -52,7 +55,26 @@ public class Aerolinea {
             avion.asignarAerolinea(null);  // Desasignar la aerolínea del avión
         }
     }
+    
+    public void mostrarFacturas() {
+        System.out.println("Facturas de " + nombre + ":");
+        for (Facturas factura : facturas) {
+            System.out.println(factura);
+        }
+    }
+    
+    public void eliminarAerolinea() {
+        facturas.clear();  // Elimina todas las facturas antes de eliminar la aerolínea
+        System.out.println("Aerolinea " + nombre + " eliminada junto con sus facturas.");
+    }
 	
+    
+    public void agregarFactura(int id, double monto) {
+        Facturas nuevaFactura = Facturas.crearFactura(id, monto);
+        facturas.add(nuevaFactura);
+    }
+    
+    
 	
     @Override
     public String toString() {
