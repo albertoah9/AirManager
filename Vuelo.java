@@ -1,5 +1,5 @@
-import java.time.LocalDateTime;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 public class Vuelo {
@@ -50,7 +50,6 @@ public class Vuelo {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -58,7 +57,6 @@ public class Vuelo {
     public LocalDate getFechaSalida() {
         return fechaSalida;
     }
-
     public void setFechaSalida(LocalDate fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
@@ -66,7 +64,6 @@ public class Vuelo {
     public LocalDateTime getHoraSalida() {
         return horaSalida;
     }
-
     public void setHoraSalida(LocalDateTime horaSalida) {
         this.horaSalida = horaSalida;
     }
@@ -74,7 +71,6 @@ public class Vuelo {
     public LocalDate getFechaLLegada() {
         return fechaLLegada;
     }
-
     public void setFechaLLegada(LocalDate fechaLLegada) {
         this.fechaLLegada = fechaLLegada;
     }
@@ -82,7 +78,6 @@ public class Vuelo {
     public LocalDateTime getHoraLlegada() {
         return horaLlegada;
     }
-
     public void setHoraLlegada(LocalDateTime horaLlegada) {
         this.horaLlegada = horaLlegada;
     }
@@ -90,7 +85,6 @@ public class Vuelo {
     public Terminal getTerminal() {
         return terminal;
     }
-
     public void setTerminal(Terminal terminal) {
         this.terminal = terminal;
     }
@@ -98,7 +92,6 @@ public class Vuelo {
     public Avion getAvion() {
         return avion;
     }
-
     public void setAvion(Avion avion) {
         this.avion = avion;
     }
@@ -106,7 +99,6 @@ public class Vuelo {
     public Pista getPista() {
         return pista;
     }
-
     public void setPista(Pista pista) {
         this.pista = pista;
     }
@@ -122,7 +114,6 @@ public class Vuelo {
     public EstadoVuelo getEstado() {
         return estado;
     }
-
     public void setEstado(EstadoVuelo estado) {
         this.estado = estado;
     }
@@ -130,7 +121,6 @@ public class Vuelo {
     public Aeropuerto getAeropuerto() {
         return aeropuerto;
     }
-
     public void setAeropuerto(Aeropuerto aeropuerto) {
         this.aeropuerto = aeropuerto;
     }
@@ -138,7 +128,6 @@ public class Vuelo {
     public TipoVuelo getTipoVuelo() {
         return tipoVuelo;
     }
-
     public void setTipoVuelo(TipoVuelo tipoVuelo) {
         this.tipoVuelo = tipoVuelo;
     }
@@ -146,7 +135,6 @@ public class Vuelo {
     public ClaseVuelo getClaseVuelo() {
         return claseVuelo;
     }
-
     public void setClaseVuelo(ClaseVuelo claseVuelo) {
         this.claseVuelo = claseVuelo;
     }
@@ -154,7 +142,6 @@ public class Vuelo {
     public Aerolinea getAerolinea() {
         return aerolinea;
     }
-
     public void setAerolinea(Aerolinea aerolinea) {
         this.aerolinea = aerolinea;
     }
