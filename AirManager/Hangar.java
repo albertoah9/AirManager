@@ -49,5 +49,8 @@ public class Hangar{
     public void setNumPlazas(int numPlazas) {
         this.numPlazas = numPlazas;
     }
+    public void Plazas(){
+        
+    }
 
 }
