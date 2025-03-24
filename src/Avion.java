@@ -15,7 +15,7 @@ public class Avion {
     private LocalDate anyoCompra;
     private boolean controlTemp;
     private EstadoAvion estadoAvion;
-    private Aerolinea aerolinea //Añadido, ver a que aerolinea pertenece el avion
+    private Aerolinea aerolinea; //Añadido, ver a que aerolinea pertenece el avion
 
     //asignaciones(constructor)
     public Avion(int id, String marca, String modelo, String matricula, int autonomia, 

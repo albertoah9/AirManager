@@ -5,11 +5,13 @@ public class Pista {
     private int id;
     private double longitud;
     private double anchura;
+    private boolean ocupada;
     
     public Pista(int id, double longitud, double anchura) {
         this.id = id;
         this.longitud = longitud;
         this.anchura = anchura;
+        this.ocupada = false;
     }
 
     public int getId() {
@@ -32,5 +34,21 @@ public class Pista {
     public void setAnchura(double anchura) {
         this.anchura = anchura;
     }
-    
+
+    public boolean isOcupada(){
+        return ocupada;
+    }
+
+    public void setOcupada(boolean ocupada){
+        this.ocupada = ocupada;
+    }
+
+    public EstadoPista verificarDisponibilidad(){
+        if(ocupada){
+            return EstadoPista.OCUPADA;
+        }else{
+            return EstadoPista.LIBRE;
+        }
+    }
+        
 }

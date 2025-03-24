@@ -1,14 +1,14 @@
 
 import java.util.List;
 
-public class Notificaciones {
+public class Notificacion {
 	private int id;
     private boolean activada;
     private boolean leida;
     private String mensaje;
     private List<Usuario> destinatarios;
 	
-	public Notificaciones (String mensaje, int id, List<Usuario> destinatarios) {
+	public Notificacion (String mensaje, int id, List<Usuario> destinatarios) {
 		this.mensaje = mensaje;
 		this.id = id;
 		this.destinatarios = destinatarios;
@@ -56,7 +56,7 @@ public class Notificaciones {
 		this.destinatarios = destinatarios;
 	}
 	
-	 public void mostrarNotificacion() {
+	public void mostrarNotificacion() {
 	        System.out.println("Notificación ID: " + id);
 	        System.out.println("Mensaje: " + mensaje);
 	        System.out.println("Destinatarios: ");
@@ -67,21 +67,21 @@ public class Notificaciones {
 	        System.out.println("Leída: " + (leida ? "Sí" : "No"));
 	    }
 
-	 public void activarNotificacion() { 
+	public void activarNotificacion() { 
 		 this.activada = true;
-	 }
+	}
 
-	 public void desactivarNotificacion() {
+	public void desactivarNotificacion() {
 	     this.activada = false;
-     }
+    }
 	 
-	 public void marcarComoLeida() {
+	public void marcarComoLeida() {
 	     this.leida = true;
-     }
+    }
 
-     public void marcarComoNoLeida() {
+    public void marcarComoNoLeida() {
 	     this.leida = false;
-     }
+    }
 	
 	
 	
