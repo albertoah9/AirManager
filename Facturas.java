@@ -1,11 +1,19 @@
 
 public class Facturas {
+	private static int contador = 1;
 	private int id;
 	private double monto;
+	private EstadoFactura estado;
 	
-	public Facturas(int id, double monto) {
-		this.id = id;
+    public enum EstadoFactura{
+        PENDIENTE_DE_PAGO, PAGADO
+    }
+
+	
+	public Facturas(double monto) {
+		this.id = contador++;
 		this.monto = monto;
+		this.setEstado(EstadoFactura.PENDIENTE_DE_PAGO);
 	}
 
 	public int getId() {
@@ -24,7 +32,21 @@ public class Facturas {
 		this.monto = monto;
 	}
 	
-	static Facturas crearFactura(int id, double monto) {
-		return new Factura(id, monto);
+	public EstadoFactura getEstado() {
+		return estado;
 	}
+
+	public void setEstado(EstadoFactura estado) {
+		this.estado = estado;
+	}
+	
+	public void marcarComoPagado() {
+		this.setEstado(EstadoFactura.PAGADO);
+	}
+	
+	static Facturas crearFactura(double monto) {
+		return new Facturas(monto);
+	}
+
+	
 }
