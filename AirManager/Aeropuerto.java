@@ -1,3 +1,4 @@
+package AirManager;
 
 import java.util.ArrayList;
 
@@ -12,18 +13,20 @@ public class Aeropuerto {
     private ArrayList<Usuario> usuarios;
     private ArrayList<Hangar> hangares;
     private ArrayList<ZonaAparcamiento> aparcamientos;
+    
 
     /* Constructor */
+
 
 
     /* Getters y Setters */
 
 
     /* Métodos */
-
-
-    // 
-
+    // Añadir usuario
+    public void addUsuario(Usuario usuario) {
+        
+    }
 
 
 }

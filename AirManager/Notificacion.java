@@ -8,7 +8,7 @@ public class Notificacion {
     private String mensaje;
     private List<Usuario> destinatarios;
 	
-	public Notificacion (String mensaje, int id, List<Usuario> destinatarios) {
+	public Notificacion(String mensaje, int id, List<Usuario> destinatarios) {
 		this.mensaje = mensaje;
 		this.id = id;
 		this.destinatarios = destinatarios;

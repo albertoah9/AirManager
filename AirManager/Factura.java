@@ -4,12 +4,11 @@ public class Factura {
 	private int id;
 	private double monto;
 	private EstadoFactura estado;
-	
+
     public enum EstadoFactura{
         PENDIENTE_DE_PAGO, PAGADO
     }
 
-	
 	public Factura(double monto) {
 		this.id = contador++;
 		this.monto = monto;
@@ -31,7 +30,7 @@ public class Factura {
 	public void setMonto(double monto) {
 		this.monto = monto;
 	}
-	
+
 	public EstadoFactura getEstado() {
 		return estado;
 	}
@@ -43,3 +42,4 @@ public class Factura {
 	public void marcarComoPagado() {
 		this.setEstado(EstadoFactura.PAGADO);
 	}
+}
