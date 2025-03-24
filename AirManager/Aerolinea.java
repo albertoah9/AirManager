@@ -44,7 +44,6 @@ public class Aerolinea {
 		this.codigoAerolinea = codigoAerolinea;
 	}
 	
-	
 	public void añadirAvion(Avion avion) {
 		flota.add(avion);
 	}
@@ -69,8 +68,8 @@ public class Aerolinea {
     }
 	
     
-    public void agregarFactura(int id, double monto) {
-        Factura nuevaFactura = new Factura();
+    public void agregarFactura(double monto) {
+        Factura nuevaFactura = new Factura(monto);
         facturas.add(nuevaFactura);
     }
     
