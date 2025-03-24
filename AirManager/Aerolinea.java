@@ -6,7 +6,7 @@ public class Aerolinea {
 	private int pais;
 	private String codigoAerolinea;
 	private List<Avion> flota;
-	private List<Facturas> facturas;
+	private List<Factura> facturas;
 	
 	public Aerolinea(String nombre, int pais, String codigoAerolinea) {
 		this.nombre = nombre;
@@ -18,7 +18,7 @@ public class Aerolinea {
 	
     public List<Avion> getFlota() { return flota; }
 
-    public List<Facturas> getFacturas() { return facturas; }
+    public List<Factura> getFacturas() { return facturas; }
 
 	public String getNombre() {
 	    return nombre;
@@ -58,7 +58,7 @@ public class Aerolinea {
     
     public void mostrarFacturas() {
         System.out.println("Facturas de " + nombre + ":");
-        for (Facturas factura : facturas) {
+        for (Factura factura : facturas) {
             System.out.println(factura);
         }
     }
@@ -70,7 +70,7 @@ public class Aerolinea {
 	
     
     public void agregarFactura(int id, double monto) {
-        Facturas nuevaFactura = Facturas.crearFactura(id, monto);
+        Factura nuevaFactura = new Factura();
         facturas.add(nuevaFactura);
     }
     
