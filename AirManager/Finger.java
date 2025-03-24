@@ -6,16 +6,26 @@ public class Finger {
 
     private int id;
     private double alturaMax;
+    private double costePorHora;
     private EstadoFinger estadoFinger;
     private PuertaEmbarque puertaEmbarque;
     
-    public Finger(int id, double alturaMax, Finger.EstadoFinger estadoFinger, PuertaEmbarque puertaEmbarque) {
+    public Finger(int id, double costePorHora, double alturaMax, Finger.EstadoFinger estadoFinger, PuertaEmbarque puertaEmbarque) {
         this.id = id;
         this.alturaMax = alturaMax;
         this.estadoFinger = estadoFinger;
         this.puertaEmbarque = puertaEmbarque;
+        this.costePorHora = costePorHora;
+    }
+    
+    public double getCostePorHora() {
+        return costePorHora;
     }
 
+    public void setCostePorHora(double costePorHora) {
+        this.costePorHora = costePorHora;
+    }
+    
     public int getId() {
         return id;
     }

@@ -4,17 +4,28 @@ public class Hangar{
     private double alto;
     private double largo;
     private int numPlazas;
+    private double costePorHora;
 
     //asignaciones(constructor)
-    public Hangar(int id, double ancho, double alto, double largo, int numPlazas){
+    public Hangar(int id, double ancho, double alto, double largo, int numPlazas, double costePorHora){
         this.id = id;
         this.alto = alto;
         this.ancho = ancho;
         this.largo = largo;
         this.numPlazas = numPlazas;
+        this.costePorHora = costePorHora;
     }
 
     //geters y seters
+    
+    public double getCostePorHora() {
+        return costePorHora;
+    }
+
+    public void setCostePorHora(double costePorHora) {
+        this.costePorHora = costePorHora;
+    }
+    
     public int getId() {
         return id;
     }

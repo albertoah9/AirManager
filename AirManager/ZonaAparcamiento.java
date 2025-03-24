@@ -6,17 +6,28 @@ public class ZonaAparcamiento {
     private double ancho;
     private double largo;
     private int numPlazas;
+    private double costePorHora;
     private TipoZonaAparcamiento tipoZonaAparcamiento;
 
-    public ZonaAparcamiento(int id, double ancho, double largo, int numPlazas,
+    public ZonaAparcamiento(int id, double costePorHora, double ancho, double largo, int numPlazas,
             ZonaAparcamiento.TipoZonaAparcamiento tipoZonaAparcamiento) {
         this.id = id;
         this.ancho = ancho;
         this.largo = largo;
         this.numPlazas = numPlazas;
         this.tipoZonaAparcamiento = tipoZonaAparcamiento;
+        this.costePorHora = costePorHora;
+    }
+    
+    
+    public double getCostePorHora() {
+        return costePorHora;
     }
 
+    public void setCostePorHora(double costePorHora) {
+        this.costePorHora = costePorHora;
+    }
+    
     public int getId() {
         return id;
     }
