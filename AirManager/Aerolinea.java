@@ -7,6 +7,7 @@ public class Aerolinea {
 	private String codigoAerolinea;
 	private List<Avion> flota;
 	private List<Factura> facturas;
+	private List<OperadorAereo> operadores;
 	
 	public Aerolinea(String nombre, int pais, String codigoAerolinea) {
 		this.nombre = nombre;
@@ -14,11 +15,18 @@ public class Aerolinea {
 		this.codigoAerolinea = codigoAerolinea;
 		this.flota = new ArrayList<>();
 		this.facturas = new ArrayList<>();
+		this.operadores = new ArrayList<>();
 	}
 	
     public List<Avion> getFlota() { return flota; }
 
     public List<Factura> getFacturas() { return facturas; }
+    
+    public List<OperadorAereo> getOperadores() {
+        return operadores;
+    }
+    
+    
 
 	public String getNombre() {
 	    return nombre;
@@ -73,12 +81,28 @@ public class Aerolinea {
         facturas.add(nuevaFactura);
     }
     
+    public void agregarOperador(OperadorAereo operador) {
+        if (operador == null || operadores.contains(operador)) return;  // Verifica si ya está en la lista
+        if (operador.getAerolineaAsignada() != null) {
+            operador.getAerolineaAsignada().eliminarOperador(operador); // Elimina de su aerolínea anterior
+        }
+        operadores.add(operador);
+        operador.setAerolineaAsignada(this); // Asigna la aerolínea al operador
+    }
+
+    public void eliminarOperador(OperadorAereo operador) {
+        if (operador != null && operadores.remove(operador)) {
+            operador.setAerolineaAsignada(null); // Remueve la asignación del operador
+        }
+    }
+    
     
 	
     @Override
     public String toString() {
         return "Aerolinea [Nombre=" + nombre + ", País=" + pais + ", Código=" + codigoAerolinea +
-               ", Flota de aviones=" + flota.size() + "]";
+               ", Flota de aviones=" + flota.size() + ", Operadores=" + operadores.size() + "]";
     }
+
 	
 }

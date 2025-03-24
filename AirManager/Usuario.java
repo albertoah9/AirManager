@@ -4,7 +4,7 @@ import java.util.List;
 
 public abstract class Usuario{
 	
-	private List<Notificaciones> notificaciones; //Relacion con la clase notificaciones
+	private List<Notificacion> notificaciones; //Relacion con la clase notificaciones
 	private int id;
 	private String contraseña;
 	private String nombre;
@@ -18,21 +18,21 @@ public abstract class Usuario{
 		this.notificaciones = new ArrayList<>(); //Inicia la lista vacia
 	}
 	
-	public void agregarNotificacion(Notificaciones notificacion) {
+	public void agregarNotificacion(Notificacion notificacion) {
 		notificaciones.add(notificacion);
 	}
 	
-	public void eliminarNotificacion(Notificaciones notificacion) {
+	public void eliminarNotificacion(Notificacion notificacion) {
         notificaciones.remove(notificacion);  
     }
 	
 	 public void mostrarNotificacion() {
-	        for (Notificaciones notificacion : notificaciones) {
+	        for (Notificacion notificacion : notificaciones) {
 	            notificacion.mostrarNotificacion();  
 	        }
 	    }
 	 
-	public List<Notificaciones> getNotificaciones(){
+	public List<Notificacion> getNotificaciones(){
 		return notificaciones;
 	}
 	

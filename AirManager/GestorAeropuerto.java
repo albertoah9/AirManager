@@ -1,7 +1,8 @@
-package usuarios;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.List;
+
 
 public class GestorAeropuerto extends Usuario{
 	
@@ -9,7 +10,7 @@ public class GestorAeropuerto extends Usuario{
 	
 	public GestorAeropuerto(String nombre, String contraseña, int id) {
 		super(nombre, contraseña, id, "Gestor");
-		this.usuarios = new ArrayList<>();  //Lista vacia para que el gestor gestione usuarios
+		this.usuarios = new ArrayList<>();  //List vacia para que el gestor gestione usuarios
 		
 	}
 	
@@ -34,33 +35,41 @@ public class GestorAeropuerto extends Usuario{
 	    }
 	}
 	
-    public void añadirUsuario(String tipo, String nombre, String contraseña, int id) {
-    	Usuario nuevoUsuario = null;
-    	
-    	for(Usuario u : usuarios) {
-    		if(u.getId() == id) {
-    			System.out.println("Error, este id ya esta en uso");
-    			return;
-    		}
-    	}
-    	
-    	switch(tipo.toLowerCase()) {
-    	case "operador":
-    		nuevoUsuario = new OperadorAereo(nombre, contraseña, id);
-    		break;
-    	case "controlador":
-    		nuevoUsuario = new ControladorAereo(nombre, contraseña, id);
-    		break;
-    	default: 
-    		System.out.println("Error");
-    		return;
-    	}
-    	
-    	usuarios.add(nuevoUsuario);
-    	System.out.println("Usuario de tipo" + tipo + "añadido");
-    	System.out.println("Nombre" + nombre);
-    	System.out.println("ID" + id);
-    }
+	public void añadirUsuario(String tipo, String nombre, String contraseña, int id, Terminal terminal, Aerolinea aerolinea) {
+	    Usuario nuevoUsuario = null;
+
+	    for (Usuario u : usuarios) {
+	        if (u.getId() == id) {
+	            System.out.println("Error, este id ya está en uso");
+	            return;
+	        }
+	    }
+
+	    switch (tipo.toLowerCase()) {
+	        case "operador":
+	            if (aerolinea != null) {
+	                nuevoUsuario = new OperadorAereo(nombre, contraseña, id, aerolinea);
+	            } else {
+	                System.out.println("Error: Se necesita una aerolínea para asignar al operador.");
+	                return;
+	            }
+	            break;
+	        case "controlador":
+	            if (terminal != null) {
+	                nuevoUsuario = new ControladorAereo(nombre, contraseña, id, terminal);
+	            } else {
+	                System.out.println("Error: Se necesita una terminal para asignar al controlador.");
+	                return;
+	            }
+	            break;
+	        default:
+	            System.out.println("Error: Tipo de usuario no válido.");
+	            return;
+	    }
+
+	    usuarios.add(nuevoUsuario);
+
+	}
     
     public void eliminarUsuario(int idUsuario) {
         Usuario usuarioAEliminar = null;
@@ -88,6 +97,44 @@ public class GestorAeropuerto extends Usuario{
             for (Usuario usuario : usuarios) {
                 System.out.println(usuario);
             }
+        }
+    }
+    
+    public Usuario buscarUsuario(int id) {
+        for (Usuario u : usuarios) {
+            if (u.getId() == id) {
+                return u;
+            }
+        }
+        return null;
+    }
+    
+    
+    public void cambiarTerminal(int idControlador, Terminal nuevaTerminal) {
+        ControladorAereo controlador = (ControladorAereo) buscarUsuario(idControlador);
+        if (controlador != null) {
+            if (nuevaTerminal != null) {
+                controlador.cambiarTerminal(nuevaTerminal);
+                System.out.println("Controlador asignado a la terminal " + nuevaTerminal.getId());
+            } else {
+                System.out.println("Error: La terminal no puede ser nula.");
+            }
+        } else {
+            System.out.println("Error: Controlador no encontrado.");
+        }
+    }
+
+    public void cambiarAerolinea(int idOperador, Aerolinea nuevaAerolinea) {
+        OperadorAereo operador = (OperadorAereo) buscarUsuario(idOperador);
+        if (operador != null) {
+            if (nuevaAerolinea != null) {
+                operador.cambiarAerolinea(nuevaAerolinea);
+                System.out.println("Operador asignado a la aerolínea " + nuevaAerolinea.getNombre());
+            } else {
+                System.out.println("Error: La aerolínea no puede ser nula.");
+            }
+        } else {
+            System.out.println("Error: Operador no encontrado.");
         }
     }
 
