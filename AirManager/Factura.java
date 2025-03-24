@@ -1,5 +1,5 @@
 
-public class Facturas {
+public class Factura {
 	private static int contador = 1;
 	private int id;
 	private double monto;
@@ -10,7 +10,7 @@ public class Facturas {
     }
 
 	
-	public Facturas(double monto) {
+	public Factura(double monto) {
 		this.id = contador++;
 		this.monto = monto;
 		this.setEstado(EstadoFactura.PENDIENTE_DE_PAGO);
@@ -43,10 +43,3 @@ public class Facturas {
 	public void marcarComoPagado() {
 		this.setEstado(EstadoFactura.PAGADO);
 	}
-	
-	static Facturas crearFactura(double monto) {
-		return new Facturas(monto);
-	}
-
-	
-}
