@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Notificacion {
@@ -82,6 +83,48 @@ public class Notificacion {
     public void marcarComoNoLeida() {
 	     this.leida = false;
     }
+    
+    public String obtenerEstadoNotificacion() {
+        return "ID: " + id + ", Activada: " + (activada ? "Sí" : "No") + ", Leída: " + (leida ? "Sí" : "No");
+    }
+
+    
+    public void agregarDestinatario(Usuario nuevoDestinatario) {
+        if (!destinatarios.contains(nuevoDestinatario)) {
+            destinatarios.add(nuevoDestinatario);
+        }
+    }
+    
+    public void eliminarDestinatario(Usuario destinatario) {
+        destinatarios.remove(destinatario);
+    }
+    
+    public void marcarTodasComoLeidas(List<Notificacion> notificaciones) {
+        for (Notificacion notificacion : notificaciones) {
+            notificacion.marcarComoLeida();
+        }
+    }
+    
+    public static List<Notificacion> obtenerNotificacionesNoLeidas(List<Notificacion> notificaciones) {
+        List<Notificacion> noLeidas = new ArrayList<>();
+        for (Notificacion notificacion : notificaciones) {
+            if (!notificacion.isLeida()) {
+                noLeidas.add(notificacion);
+            }
+        }
+        return noLeidas;
+    }
+    
+    public static void cambiarEstadoDeTodas(List<Notificacion> notificaciones, boolean activar) {
+        for (Notificacion notificacion : notificaciones) {
+            notificacion.setActivada(activar);
+        }
+    }
+
+
+
+
+
 	
 	
 	
