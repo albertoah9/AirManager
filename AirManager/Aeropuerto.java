@@ -16,7 +16,7 @@ public class Aeropuerto {
     
 
     /* Constructor */
-
+    
 
 
     /* Getters y Setters */
@@ -25,7 +25,7 @@ public class Aeropuerto {
     /* Métodos */
     // Añadir usuario
     public void addUsuario(Usuario usuario) {
-        
+        usuarios.add(usuario);
     }
 
 
