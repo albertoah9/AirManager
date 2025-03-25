@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream:AirManager/OperadorAereo.java
+=======
+package src.usuarios;
+
+package src.usuarios;
+>>>>>>> Stashed changes:AirManager/src/usuarios/OperadorAereo.java
 public class OperadorAereo extends Usuario {
     private Aerolinea aerolineaAsignada;
 
