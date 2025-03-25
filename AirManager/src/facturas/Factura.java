@@ -1,4 +1,4 @@
-package facturas;
+package src.facturas;
 
 public class Factura {
 	private static int contador = 1;

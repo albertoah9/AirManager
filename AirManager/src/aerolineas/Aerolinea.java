@@ -1,6 +1,8 @@
 package aerolineas;
 
 import elementos.Avion;
+import facturas.Factura;
+import usuarios.OperadorAereo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,8 +31,6 @@ public class Aerolinea {
     public List<OperadorAereo> getOperadores() {
         return operadores;
     }
-    
-    
 
 	public String getNombre() {
 	    return nombre;

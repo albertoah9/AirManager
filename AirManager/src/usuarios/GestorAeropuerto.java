@@ -1,3 +1,4 @@
+package src.usuarios;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,6 @@ public class GestorAeropuerto extends Usuario{
 	public GestorAeropuerto(String nombre, String contraseña, int id) {
 		super(nombre, contraseña, id, "Gestor");
 		this.usuarios = new ArrayList<>();  //List vacia para que el gestor gestione usuarios
-		
 	}
 	
 	public void modificarUsuario(int idUsuario, String nuevoNombre, String nuevaContraseña) {

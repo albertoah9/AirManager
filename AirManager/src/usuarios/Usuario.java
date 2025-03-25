@@ -1,4 +1,4 @@
-package AirManager;
+package src.usuarios;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,9 +66,6 @@ public abstract class Usuario{
 	public String toString() {
 		return "Usuario [id=" + id + ", contraseña=" + contraseña + ", nombre=" + nombre + "]";
 	}
-	
-	
-	
 }
 
 

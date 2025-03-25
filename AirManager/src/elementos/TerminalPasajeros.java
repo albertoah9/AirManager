@@ -1,4 +1,4 @@
-package elementos;
+package src.elementos;
 
 public class TerminalPasajeros extends Terminal{
     private int aforoMax;

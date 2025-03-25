@@ -1,6 +1,10 @@
+package src.vuelos;
+
+import src.elementos.*;
+import src.usuarios.*;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-
 
 public class Vuelo {
     public enum EstadoVuelo {
