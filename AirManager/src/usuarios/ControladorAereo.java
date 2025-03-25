@@ -1,3 +1,4 @@
+package src.usuarios;
 public class ControladorAereo extends Usuario {
     private Terminal terminalAsignada;
 

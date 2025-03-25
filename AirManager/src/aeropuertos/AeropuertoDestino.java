@@ -1,4 +1,4 @@
-package aeropuertos;
+package src.aeropuertos;
 
 public class AeropuertoDestino {
     public enum UbiRelCiudad {

@@ -1,4 +1,4 @@
-package estadisticas;
+package src.estadisticas;
 
 public class Estadisticas {
     

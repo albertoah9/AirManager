@@ -1,3 +1,4 @@
+package src.usuarios;
 public class OperadorAereo extends Usuario {
     private Aerolinea aerolineaAsignada;
 

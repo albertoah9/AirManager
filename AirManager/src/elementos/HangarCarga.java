@@ -1,4 +1,4 @@
-package elementos;
+package src.elementos;
 
 public class HangarCarga extends Hangar {
     private int temperatura;
