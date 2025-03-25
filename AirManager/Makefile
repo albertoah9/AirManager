@@ -24,6 +24,7 @@ CLASSES = $(SOURCES:$(SRC_DIR)/%.java=$(BIN_DIR)/%.class)
 all: $(BIN_DIR)/$(MAIN_CLASS).class
 
 
+
 # Regla para compilar archivos .java a .class
 
 $(BIN_DIR)/%.class: $(SRC_DIR)/%.java
