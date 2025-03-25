@@ -12,7 +12,7 @@ public class Factura {
 	public Factura(double monto) {
 		this.id = contador++;
 		this.monto = monto;
-		this.setEstado(EstadoFactura.PENDIENTE_DE_PAGO);
+		this.estado = EstadoFactura.PENDIENTE_DE_PAGO;
 	}
 
 	public int getId() {
