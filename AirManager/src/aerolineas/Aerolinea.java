@@ -1,5 +1,7 @@
 package aerolineas;
 
+import elementos.Avion;
+
 import java.util.ArrayList;
 import java.util.List;
 
