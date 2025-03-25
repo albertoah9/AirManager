@@ -1,4 +1,4 @@
-package aerolineas;
+package src.aerolineas;
 
 import elementos.Avion;
 import facturas.Factura;
