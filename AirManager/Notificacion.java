@@ -1,14 +1,15 @@
 
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Notificacion {
 	private int id;
     private boolean activada;
     private boolean leida;
     private String mensaje;
-    private List<Usuario> destinatarios;
+    private ArrayList<Usuario> destinatarios;
 	
-	public Notificacion (String mensaje, int id, List<Usuario> destinatarios) {
+	public Notificacion(String mensaje, int id, List<Usuario> destinatarios) {
 		this.mensaje = mensaje;
 		this.id = id;
 		this.destinatarios = destinatarios;
