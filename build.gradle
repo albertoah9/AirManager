@@ -7,10 +7,7 @@ repositories {
 }
 
 dependencies {
-    // Tus dependencias actuales (como los JARs locales)
-    implementation fileTree(dir: '.', include: ['*.jar'])
-    
-    // JUnit 5
+    // Dependencias modernas para JUnit 5 (sintaxis actualizada)
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 }
